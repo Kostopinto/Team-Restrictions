@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html,
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 20px;
+}
+
+h1 {
+  padding-left: 10px;
+}
+
+h1,
+h2 {
+  color: #333366;
+}
+
+h3 {
+  color: lightcoral;
+}
+
+nav {
+  display: block;
+  margin: 0 auto 30px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #555555;
+  overflow: hidden;
+  padding: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 5px 5px grey;
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Roboto", serif;
+  display: block;
+  padding: 1em;
+  border-right: 1px solid #666666;
+  color: #ffffff;
+}
+
+nav a:hover {
+  background: #333333;
+}
+
+.logo {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+}
+
+div {
+  margin: 20px;
+}
+
+table {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+::marker {
+  color: burlywood;
+  font-size: 1.2em;
+}
+
+textarea {
+  width: 655px;
+  height: 400px;
+  margin: 5px 0;
+}
+
+input,
+select {
+  margin: 5px 0;
+  height: 30px;
+}
+
+label,
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: middle;
+}
+
+.settingsSelections {
+  list-style: none;
+  margin-block-start: 0;
+  padding: 0;
+}

@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {{> menu}}
+    <h1>{{title}}</h1>
+    
+    <section>
+      <div>
+      <h2>Players</h2>
+        {{#if players.length}} 
+          <ol>
+            {{#each players}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ol>
+        {{else}}
+          <h3>The list of players is empty</h3>
+        {{/if}}
+      </div>
+      <div>
+        <table>
+          <thead>
+            <h2>Restrictions</h2>
+            {{#if isNoRestrictions}} 
+              <h3>The list of restrictions is empty</h3>
+            {{/if }}
+          </thead>
+            <tbody>
+              {{#each restrictions}}
+                <tr>
+                  <td>{{@key}}</td>
+                  <td>{{this}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+         </table>
+      </div>
+      <div>
+        <table>
+          <thead>
+              <h2>Player Groups</h2>
+          </thead>
+          {{#if playerGroups.length}}
+          <tbody>
+            {{#each playerGroups}}
+              <tr>
+                {{#each this}}
+                  <td>{{this}}</td>
+                {{/each}}
+              </tr>
+            {{/each}}
+          </tbody>
+          {{else}}
+          <h3>No formed groups</h3>
+        {{/if}}
+        {{#if isOdd}}
+          <h3>An odd number of players</h3>
+        {{/if}}
+        </table>
+      </div>
+    </section>
+  </body>
+</html>

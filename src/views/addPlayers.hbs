@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {{> menu}}
+    <h1>{{title}}</h1>
+
+    <section>
+      <form action="/add-players" method="post">
+        <label>Specify the list of players separating them with commas or list them in a column:</label><br />
+        <textarea name="newPlayers" required></textarea>
+        <br>
+        <input type="submit" value="Add players" />
+      </form>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "players": [
+    "Oleksandr Bardakov",
+    "Serhii Holubtsov",
+    "Artem Zabava",
+    "Oleh Reshetylo",
+    "Alla Panahushyna",
+    "Albert Davletov",
+    "Albina Khanbekova",
+    "Aleksandar Balnozan",
+    "Aleksandr Chebotov",
+    "Aleksandr Dorofeev",
+    "Aleksandr Kravchuk",
+    "Aleksandr Rybakov",
+    "Aleksandra Bogdanova",
+    "Alexey Chernikov",
+    "Alexey Popov",
+    "Alina Afonina",
+    "Anastasia Stadnik",
+    "Bogdan Vetrenko",
+    "Daniil Kulakov",
+    "Danila Karulin"
+  ],
+  "restrictions": {
+    "Oleh Reshetylo": [
+      "Oleksandr Bardakov",
+      "Serhii Holubtsov",
+      "Alla Panahushyna"
+    ],
+    "Serhii Holubtsov": ["Oleksandr Bardakov", "Oleh Reshetylo"],
+    "Artem Zabava": ["Oleksandr Bardakov", "Alla Panahushyna"],
+    "Alla Panahushyna": [
+      "Oleh Reshetylo",
+      "Artem Zabava",
+      "Oleksandr Bardakov"
+    ],
+    "Oleksandr Bardakov": [
+      "Oleh Reshetylo",
+      "Serhii Holubtsov",
+      "Artem Zabava",
+      "Alla Panahushyna"
+    ]
+  }
+}

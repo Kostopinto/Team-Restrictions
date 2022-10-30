@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>{{title}}</title>
+</head>
+
+<body>
+  {{> menu}}
+  <h1>{{title}}</h1>
+  <section>
+    <form action="/settings" method="post">
+      <ul class="settingsSelections">
+        <li>
+          <label for="deleteRestrictions">
+          <input type="radio" id="deleteRestrictions" name="settingsSelection" value="deleteRestrictions" />
+          Delete Restrictions</label>
+        </li>
+        <li>
+          <input type="radio" id="deleteAllPlayersData" name="settingsSelection" value="deleteAllPlayersData" />
+          <label for="deleteAllPlayersData">Delete All Players Data</label>
+        </li>
+        <li>
+          <input type="radio" id="loadDefaultPlayersRestrictions" name="settingsSelection" value="loadDefaultPlayersRestrictions" />
+          <label for="loadDefaultPlayersRestrictions">Load default players restrictions</label>
+        </li>
+        <li>
+          <input type="radio" id="loadDefaultPlayersData" name="settingsSelection" value="loadDefaultPlayersData" />
+          <label for="loadDefaultPlayersData">Load default players data</label>
+        </li>
+        <li>
+          <input type="checkbox" id="enableRandomTeams" name="enableRandomTeams" {{#if isEnableRandomTeam}}checked{{/if}}>
+          <label for="enableRandomTeams">Enable random generation of teams</label>
+        </li>
+      </ul>
+      <input type="submit" value="Save" />
+    </form>
+  </section>
+</body>
+</html>
