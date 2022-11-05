@@ -172,6 +172,7 @@ app.get("*", urlencodedParser, (request, response) => {
 });
 
 // Server
-app.listen(3000, "127.0.0.1", () => {
-  console.log("Server running on port 3000...");
+const PORT = process.env.port | 3000;
+app.listen(3000, () => {
+  console.log(`Server running on port ${PORT}...`);
 });
