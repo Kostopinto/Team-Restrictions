@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const expressHbs = require("express-handlebars");
 const { urlencoded } = require("body-parser");
+var morgan = require('morgan')
+
 const { players, restrictions } = require("./data.json");
 const { getTeamGroups } = require("./getTeamGroups");
 
@@ -28,6 +30,7 @@ app.engine(
   })
 );
 app.set("view engine", "hbs");
+app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use("/", express.static(__dirname + "/public"));
 
@@ -172,7 +175,7 @@ app.get("*", urlencodedParser, (request, response) => {
 });
 
 // Server
-const PORT = process.env.port | 3000;
-app.listen(3000, () => {
+const PORT = process.env.port || 3000;
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}...`);
 });
